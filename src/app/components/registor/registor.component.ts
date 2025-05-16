@@ -6,10 +6,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card'; // <-- add this
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 
+
 @Component({
-  selector: 'app-login',
-  standalone: true,
-  imports: [
+  selector: 'registor',
+   imports: [
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,
@@ -18,15 +18,9 @@ import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angula
     ReactiveFormsModule    
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
+  templateUrl: './registor.component.html',
+  styleUrl: './registor.component.css'
 })
-export class LoginComponent {
-  loginForm: FormGroup;
+export class RegistorComponent {
 
-  constructor(private fb: FormBuilder) {
-    this.loginForm = this.fb.group({
-   
-    });
-  }
 }
