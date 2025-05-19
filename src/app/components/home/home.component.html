@@ -1,1 +1,29 @@
-<p>home works!</p>
+<div class="container mt-4 " style="background-color: #8fc4b7;">
+  <h2 class="text-center">Registered Users</h2>
+
+  <table *ngIf="users.length > 0" class="table table-bordered table-striped mt-4">
+    <thead class="thead-dark">
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Department</th>
+        <th>Salary</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users; index as i">
+        <td>{{ i + 1 }}</td>
+        <td>{{ user.uName }}</td>
+        <td>{{ user.eMail }}</td>
+        <td>{{ user.department }}</td>
+        <td>{{ user.salary }}</td>
+        <!-- <td><a routerLink="['edit']" routerLinkActive="active">Edit</a></td> -->
+        <td><a [routerLink]="['/edit',user.eMail]" routerLinkActive="active">Edit</a></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p *ngIf="users.length === 0" class="text-center mt-4 text-muted">No users registered yet.</p>
+</div>

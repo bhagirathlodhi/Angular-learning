@@ -1,11 +1,11 @@
 <div class="container mt-5" style="width: fit-content;">
   <div class="card shadow-lg" style="border-radius: 25px; width: 600px; width: 130%;">
     <div class="card-body">
-      <div class="custom-signup-header">
-        <h2 class="text-center">Sign Up</h2>
+      <div class="custom-update-header">
+        <h2 class="text-center">Update Details</h2>
       </div>
 
-      <form (ngSubmit)="onUserSave()" [formGroup]="userForm">
+      <form (ngSubmit)="onUserEdit()" [formGroup]="userFormEdit">
         <div class="mb-3">
           <label for="name" class="form-label">Your Name</label>
           <input type="text" class="form-control" formControlName="uName" id="name" required>
@@ -27,25 +27,8 @@
           <input type="number" class="form-control" formControlName="salary" id="salary" required>
         </div>
 
-        <div class="mb-3">
-          <label for="password" class="form-label">Password</label>
-          <input type="password" class="form-control" formControlName="uPassword" id="password" required>
-        </div>
-
-        <div class="mb-3">
-          <label for="confirmPassword" class="form-label">Repeat your password</label>
-          <input type="password" class="form-control" formControlName="uRePassword" id="confirmPassword" required>
-        </div>
-
-        <div class="form-check mb-3 text-center">
-          <input class="form-check-input" formControlName="isAgree" type="checkbox" id="termsCheck" required>
-          <label class="form-check-label" for="termsCheck">
-            I agree to all statements in <a href="#">Terms of service</a>
-          </label>
-        </div>
-
         <div class="d-grid">
-          <button type="submit" class="btn btn-primary btn-sm">Register</button>
+          <button type="submit" class="btn btn-primary btn-sm">Update</button>
         </div>
       </form>
     </div>

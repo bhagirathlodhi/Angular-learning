@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component,Inject,PLATFORM_ID   } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './components/navbar/navbar.component';
 
@@ -11,4 +12,5 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 })
 export class AppComponent {
   title = 'Recon Test';
+  
 }

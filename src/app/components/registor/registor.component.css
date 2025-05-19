@@ -1,23 +1,6 @@
-    .login-wrapper {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background-color: hsla(36, 28%, 90%, 0.847);
-    }
-    .mat-mdc-card-title{
-        text-align: center;
-    }
-    
-    mat-card {
-        width: 400px;
-        padding: 20px;
-    }
-    mat-form-field {
-        width: 100%;
-        margin-bottom: 15px;
-    }
-
-    button {
-        width: 100%;
-    }
+.custom-signup-header {
+  background-color: #4CAF50; /* nice green */
+  color: white;
+  border-radius: 12px;
+  padding: 16px;
+}

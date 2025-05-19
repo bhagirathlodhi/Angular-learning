@@ -1,32 +1,35 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { MatSelectModule } from '@angular/material/select';
-import { MatInputModule } from '@angular/material/input';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatButtonModule } from '@angular/material/button';
-import { MatCardModule } from '@angular/material/card'; // <-- add this
-import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { FormControl, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [
-    MatFormFieldModule,
-    MatInputModule,
-    MatSelectModule,
-    MatButtonModule,
-    MatCardModule,          
-    ReactiveFormsModule    
-  ],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [ReactiveFormsModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
-  loginForm: FormGroup;
+  constructor(private router: Router) {}
+  
+ loginForm = new FormGroup({
+    eMail: new FormControl('', [Validators.required, Validators.email]),
+    uPassword: new FormControl('', Validators.required)
+  });
 
-  constructor(private fb: FormBuilder) {
-    this.loginForm = this.fb.group({
-   
-    });
+  onLogin() {
+    const users = JSON.parse(localStorage.getItem('users') || '[]');
+    const formVal = this.loginForm.value;
+
+    const foundUser = users.find((user: any) =>
+      user.eMail === formVal.eMail && user.uPassword === formVal.uPassword
+    );
+
+    if (foundUser) {
+      alert("Login successful!");
+      this.router.navigate(['/'])
+    } else {
+      alert("Invalid email or password.");
+    }
   }
 }
