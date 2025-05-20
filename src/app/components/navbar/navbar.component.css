@@ -1,3 +1,20 @@
 .nav-class{
-    background-color: #00f6ffa8;
+    /* background-color: hwb(0 0% 96% / 0.938); */
+  background-color: #404040 !important; 
+}
+
+.navbar .nav-link {
+  color: white !important;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: white; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+html {
+  scroll-behavior: smooth;
 }

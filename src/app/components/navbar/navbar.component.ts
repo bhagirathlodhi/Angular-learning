@@ -1,4 +1,4 @@
-import { Component, OnInit,Inject, PLATFORM_ID} from '@angular/core';
+import { Component, OnInit,Inject, PLATFORM_ID, HostListener} from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 
 import { RouterLink,Router } from '@angular/router';
@@ -34,4 +34,13 @@ export class NavbarComponent implements OnInit{
     }
   }
 
+  @HostListener('window:scroll', [])
+onWindowScroll() {
+  const navbar = document.querySelector('nav');
+  if (window.scrollY > 50) {
+    navbar?.classList.add('scrolled');
+  } else {
+    navbar?.classList.remove('scrolled');
+  }
+}
 }
