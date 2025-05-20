@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterModule, RouterLink,Router ,ActivatedRoute} from '@angular/router';
 import { FormControl, FormGroup,ReactiveFormsModule } from '@angular/forms';
-// import { Rea}
 
 @Component({
   selector: 'app-edit',
@@ -25,13 +24,15 @@ export class EditComponent implements OnInit{
   constructor(private route: ActivatedRoute, private router: Router) {}
 
   ngOnInit(): void {
-    this.emailParam = this.route.snapshot.paramMap.get('email');
+    debugger;
+    this.emailParam = this.route.snapshot.paramMap.get('eMail');
     if (this.emailParam) {
       this.loadUserData(this.emailParam);
     }
   }
 
   loadUserData(email: string) {
+    debugger;
     const existingUsers = JSON.parse(localStorage.getItem('users') || '[]');
     const user = existingUsers.find((u: any) => u.eMail === email);
     console.log(" user::"+user)
@@ -45,6 +46,7 @@ export class EditComponent implements OnInit{
   }
 
   onUserEdit(): void {
+    debugger;
     if (this.userFormEdit.valid && this.emailParam) {
       const updatedUser = this.userFormEdit.value;
 

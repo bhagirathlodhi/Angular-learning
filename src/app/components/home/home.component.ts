@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule,RouterModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
@@ -20,14 +20,24 @@ export class HomeComponent {
 
   ngOnInit() {
     if (this.isBrowser) {
-      this.loadUsers();  
+      this.loadUsers();
       const user = localStorage.getItem('user');
-      console.log('User from storage:', user);
+     
     }
   }
 
   loadUsers() {
     const data = localStorage.getItem('users');
     this.users = data ? JSON.parse(data) : [];
+     console.log('User from storage:', this.users);
+  }
+
+  deleteUser(email: string): void {
+    // debugger;
+    let users = JSON.parse(localStorage.getItem('users') || '[]');
+    users = users.filter((u: any) => u.eMail !== email);
+    localStorage.setItem('users', JSON.stringify(users));
+    alert('User deleted successfully!');
+    this.users = users;
   }
 }

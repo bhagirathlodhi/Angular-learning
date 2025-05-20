@@ -44,7 +44,6 @@ export class RegistorComponent {
       // Save new user
       existingUsers.push(formValue);
       localStorage.setItem('users', JSON.stringify(existingUsers));
-
       alert("User registered successfully!");
       this.userForm.reset();
     } else {
