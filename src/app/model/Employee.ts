@@ -1,22 +1,30 @@
 export class EmployeeModel{
     empId: number;
-    name: String;
-    country: String;
-    state: String;
-    emailId: String;
+    fName: String;
+    lName: String;
     department: String;
-    contactNo: String;
-    address: String;
+    gender: String;
+    email: String;
+    ph_number: String;
+    // address: String;
 
     constructor(){
         this.empId = 0;
-        this.name = '';
-        this.country = '';
-        this.state = '';
-        this.emailId = '';
+        this.fName = '';
+        this.lName = '';
         this.department = '';
-        this.contactNo = '';
-        this.address = '';
+        this.gender = '';
+        this.email ='';
+        this.ph_number = '';
+        // this.address = '';
         
     }
+
+            // "empId": "",
+            // "fName": "",
+            // "lName": "",
+            // "department": "",
+            // "gender": "",
+            // "email": "",
+            // "ph_number": ""
 }

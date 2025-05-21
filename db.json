@@ -1,0 +1,67 @@
+{
+  "employeeList": [
+    {
+      "empId": "18",
+      "fName": "Virat",
+      "lName": "kohli",
+      "department": "Sport",
+      "gender": "Male",
+      "email": "viratkk@gmail.com",
+      "ph_number": "8956784512"
+    },
+    {
+      "id": "8ac5",
+      "fName": "Bhagirath",
+      "lName": "Lodhi",
+      "department": "2",
+      "gender": "option2",
+      "email": "bh@gmail.com",
+      "ph_number": "06260940563"
+    },
+    {
+      "id": "a623",
+      "fName": "vikas",
+      "lName": "khanna",
+      "department": "2",
+      "gender": "option2",
+      "email": "vk@gmail.com",
+      "ph_number": "23564784"
+    },
+    {
+      "id": "6474",
+      "fName": "Akash",
+      "lName": "Yogi",
+      "department": "3",
+      "gender": "option2",
+      "email": "hr@gmail.com",
+      "ph_number": "06260940563"
+    },
+    {
+      "id": "609e",
+      "fName": "Himanshi",
+      "lName": "Sharma",
+      "department": "HR",
+      "gender": "option1",
+      "email": "apply@gmail.com",
+      "ph_number": "89562301"
+    },
+    {
+      "id": "df43",
+      "fName": "Vikash",
+      "lName": "Sharma",
+      "department": "QA",
+      "gender": "option2",
+      "email": "vikasj@gmail.com",
+      "ph_number": "jfa5555"
+    },
+    {
+      "id": "c805",
+      "fName": "Bhagirath",
+      "lName": "Lodhi",
+      "department": "HR",
+      "gender": "option2",
+      "email": "dddd@gmail.com",
+      "ph_number": "06260940563"
+    }
+  ]
+}

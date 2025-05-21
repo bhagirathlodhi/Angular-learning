@@ -1,0 +1,19 @@
+{
+    "data": [
+        {
+                "fName": "Radhey",
+                "lName": "Shyam",
+                "department": "HR",
+                "gender": "Male",
+                "email": "radheshyam@gmail.com",
+                "ph_number": "8959040880"
+        },{
+            "fName": "Mangal",
+            "lName": "G",
+            "department": "Sales",
+            "gender": "Male",
+            "email": "mangal@gmail.com",
+            "ph_number": "8959555550"
+        }
+    ]
+}
