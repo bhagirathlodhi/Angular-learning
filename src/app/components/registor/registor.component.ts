@@ -4,7 +4,7 @@ import { FormBuilder, FormControl, FormGroup, Validators, ReactiveFormsModule } 
 
 @Component({
   selector: 'registor',
-   imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule],
   templateUrl: './registor.component.html',
   styleUrl: './registor.component.css'
 })
@@ -17,7 +17,8 @@ export class RegistorComponent {
     salary: new FormControl(""),
     uPassword: new FormControl(""),
     uRePassword : new FormControl(""),
-    isAgree: new FormControl(false)
+    isAgree: new FormControl(false),
+    isloggedIn: new FormControl(false)
 
   })
 

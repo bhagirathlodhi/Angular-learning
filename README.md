@@ -2,6 +2,17 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.11.
 
+## Setup steps
+ install the Node.js
+ install the CLI using below command 
+     npm install -g @angular/cli
+ run the project using 
+    ng serve
+for json-server run the 
+    json-server --watch db.json
+
+
+
 ## Development server
 
 To start a local development server, run:

@@ -1,5 +1,5 @@
 <section class="vh-100 gradient-custom">
-  <div class="container py-5 h-100">
+  <div class="container py-5">
     <div class="row">
       <div class="col-12">
         <button class="btn btn-sm btn-success" (click)="isListView = !isListView">{{isListView ? 'New':'List'}}</button>
@@ -26,18 +26,23 @@
               <td>{{emp.department}}</td>
               <td>{{emp.email}}</td>
               <td>{{emp.ph_number}}</td>
-              <td><button class="btn btn-warning" (click)="openEditModal(emp)">Edit</button></td>
+              <td><button class="btn btn-warning" (click)="openEditModal(emp)">Edit</button>/
+                <button class="btn btn-danger" (click)="deleteEmployee(emp)">Delete</button>
+              </td>
             </tr>
           </tbody>
         </table>
       </div>
     </div>
 
-    <div *ngIf="!isListView" class="row justify-content-center align-items-center h-100">
+    <div *ngIf="!isListView" class="row justify-content-center align-items-center">
       <div class="col-12 col-9 col-xl-7">
         <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
           <div class="card-body p-4 p-md-5">
-            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Registration Form</h3>
+            <h3 class="mb-5 text-center bg-primary text-white rounded p-1">
+              Registration Form
+            </h3>
+            <!-- <button class="btn btn-secondary justify-content-center"> Registration Form</button> -->
             <div class="row">
               <div class="col-md-6 mb-4">
 
@@ -45,10 +50,8 @@
                   <input type="text" [(ngModel)]="empObj.fName" id="firstName" class="form-control form-control" />
                   <label class="form-label" for="firstName">First Name</label>
                 </div>
-
               </div>
               <div class="col-md-6 mb-4">
-
                 <div data-mdb-input-init class="form-outline">
                   <input type="text" [(ngModel)]="empObj.lName" id="lastName" class="form-control form-control" />
                   <label class="form-label" for="lastName">Last Name</label>
@@ -56,8 +59,6 @@
 
               </div>
             </div>
-
-
             <div class="row">
               <div class="col-md-6 mb-4 d-flex align-items-center">
                 <select [(ngModel)]="empObj.department" class="select form-control">
@@ -67,31 +68,33 @@
 
               </div>
               <div class="col-md-6 mb-4">
-
                 <h6 class="mb-2 pb-1">Gender: </h6>
 
                 <div class="form-check form-check-inline">
                   <input [(ngModel)]="empObj.gender" class="form-check-input" type="radio" name="gender"
-                    id="femaleGender" value="option1" checked />
+                    id="femaleGender" value="Female" />
                   <label class="form-check-label" for="femaleGender">Female</label>
                 </div>
 
                 <div class="form-check form-check-inline">
                   <input [(ngModel)]="empObj.gender" class="form-check-input" type="radio" name="gender" id="maleGender"
-                    value="option2" />
+                    value="Male" />
                   <label class="form-check-label" for="maleGender">Male</label>
                 </div>
 
                 <div class="form-check form-check-inline">
-                  <input [(ngModel)]="empObj.gender" class="form-check-input" type="radio" name="inlineRadioOptions"
-                    id="otherGender" value="option3" />
+                  <input [(ngModel)]="empObj.gender" class="form-check-input" type="radio" name="gender"
+                    id="otherGender" value="Other" />
                   <label class="form-check-label" for="otherGender">Other</label>
                 </div>
 
+                
+                <p class="mt-2">Selected: {{ empObj.gender }}</p>
               </div>
+
             </div>
             <div class="row">
-              <div class="col-md-6 mb-4 pb-2">
+              <div class="col-md-6 pb-2">
 
                 <div data-mdb-input-init class="form-outline">
                   <input [(ngModel)]="empObj.email" type="email" id="emailAddress" class="form-control form-control" />
@@ -99,7 +102,7 @@
                 </div>
 
               </div>
-              <div class="col-md-6 mb-4 pb-2">
+              <div class="col-md-6 pb-2">
 
                 <div data-mdb-input-init class="form-outline">
                   <input [(ngModel)]="empObj.ph_number" type="tel" id="phoneNumber" class="form-control form-control" />
@@ -108,10 +111,7 @@
 
               </div>
             </div>
-
-
-
-            <div class="mt-4 pt-2">
+            <div class="pt-2">
               <input data-mdb-ripple-init class="btn btn-primary btn" (click)="createAndSaveEmp()" type="submit"
                 value="Submit" />
             </div>
@@ -147,7 +147,7 @@
                 <select [(ngModel)]="empObj.department" class="select form-control">
                   <option value="">Choose Department</option>
                   <option *ngFor="let dept of departments" [value]="dept.deptName">{{dept.deptName}}</option>
-              </select>
+                </select>
               </div>
 
               <div class="col-md-6 mb-3">
@@ -184,7 +184,7 @@
 
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-            <button type="button" class="btn btn-primary" (click)="updateEmployee()">Save Changes</button>
+            <button type="button" class="btn btn-primary" (click)="updateEmployee(empObj)">Save Changes</button>
           </div>
         </div>
       </div>
