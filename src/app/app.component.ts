@@ -1,9 +1,11 @@
-import { Component,Inject,PLATFORM_ID   } from '@angular/core';
+import { Component,Inject,OnInit,PLATFORM_ID   } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from "./components/footer/footer.component";
 // import { FormsModule } from '@angular/forms';
+import { AuthService } from './services/auth.service';
+import { Router } from '@angular/router';
 
 
 
@@ -15,7 +17,24 @@ import { FooterComponent } from "./components/footer/footer.component";
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {
+export class AppComponent{
   title = 'Recon Test';
-  
+  isLoggedIn: boolean = false;
+
+
+// ngOnInit() {
+//   debugger;
+//   const userData = localStorage.getItem('currentUser');
+//   if (userData) {
+//     const user = JSON.parse(userData);
+//     this.isLoggedIn = user.isLoggedIn === true;
+//   }
+// }
+
+
+constructor(public authService: AuthService, private router: Router) {}
+
+
+
+
 }

@@ -1,15 +1,22 @@
-import { Component } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormBuilder, FormControl, FormGroup, Validators, ReactiveFormsModule,FormsModule ,} from '@angular/forms';
+import { AuthService } from '../../services/auth.service';
+import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+// import { FormsModule } from '@angular/forms';
+
 
 
 @Component({
   selector: 'registor',
-  imports: [ReactiveFormsModule],
+  standalone: true,
+  imports: [ReactiveFormsModule,FormsModule,CommonModule ],
   templateUrl: './registor.component.html',
   styleUrl: './registor.component.css'
 })
-export class RegistorComponent {
-
+export class RegistorComponent implements OnInit{
+// these field we are stroring into localStorage;
   userForm: FormGroup =new FormGroup({
     uName: new FormControl(""),
     eMail: new FormControl(""),
@@ -18,37 +25,26 @@ export class RegistorComponent {
     uPassword: new FormControl(""),
     uRePassword : new FormControl(""),
     isAgree: new FormControl(false),
-    isloggedIn: new FormControl(false)
+    isLoggedIn: new FormControl(false)
 
   })
 
-  onUserSave(): void {
-    if (this.userForm.valid) {
-      const formValue = this.userForm.value;
+  constructor(private authService: AuthService, private router: Router, private http: HttpClient){}
+   ngOnInit(): void {
+    this.loadDepartMents(); 
+  }
 
-      // password check
-      if (formValue.uPassword !== formValue.uRePassword) {
-        alert("Passwords do not match.");
-        return;
-      }
+ departments: any[] = [];
+  onUserSave() {
+  const user = this.userForm.value;
+  this.authService.signup(user);
+  alert('Signup successful');
+  this.router.navigate(['/login']);
+}
 
-      // Simulated JSON using localStorage
-      const existingUsers = JSON.parse(localStorage.getItem('users') || '[]');
-
-      // Check if email already exists
-      const userExists = existingUsers.some((user: any) => user.eMail === formValue.eMail);
-      if (userExists) {
-        alert("Email already registered.");
-        return;
-      }
-
-      // Save new user
-      existingUsers.push(formValue);
-      localStorage.setItem('users', JSON.stringify(existingUsers));
-      alert("User registered successfully!");
-      this.userForm.reset();
-    } else {
-      alert("Please fill all required fields correctly.");
-    }
+ loadDepartMents() {
+    this.http.get("assets/department.json").subscribe((res: any) => {
+      this.departments = res.data;
+    });
   }
 }

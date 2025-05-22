@@ -73,7 +73,7 @@ export class NewEmployeeComponent implements OnInit {
 
   // Update the Employee
   updateEmployee(emp: any) {
-    // this.http.patch(``)
+    
     this.http.patch(`http://localhost:3000/employeeList/${emp.id}`, emp).subscribe((res: any) => {
       alert('Employee updated successfully');
       const modalInstance = bootstrap.Modal.getInstance(this.editModal.nativeElement);

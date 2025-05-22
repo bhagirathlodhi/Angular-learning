@@ -17,36 +17,38 @@
         </div>
 
         <div class="mb-3">
-          <label for="department" class="form-label">Department</label>
-          <input type="text" class="form-control" formControlName="department" id="department" required>
-        </div>
+        <label for="department" class="form-label">Department</label>
+        <select class="form-control" formControlName="department" id="department">
+          <option value="">Choose Department</option>
+          <option *ngFor="let dept of departments" [value]="dept.deptName">{{ dept.deptName }}</option>
+        </select>
+      </div>
 
+      <div class="mb-3">
+        <label for="salary" class="form-label">Salary</label>
+        <input type="number" class="form-control" formControlName="salary" id="salary" required>
+      </div>
 
-        <div class="mb-3">
-          <label for="salary" class="form-label">Salary</label>
-          <input type="number" class="form-control" formControlName="salary" id="salary" required>
-        </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" formControlName="uPassword" id="password" required>
+      </div>
 
-        <div class="mb-3">
-          <label for="password" class="form-label">Password</label>
-          <input type="password" class="form-control" formControlName="uPassword" id="password" required>
-        </div>
+      <div class="mb-3">
+        <label for="confirmPassword" class="form-label">Repeat your password</label>
+        <input type="password" class="form-control" formControlName="uRePassword" id="confirmPassword" required>
+      </div>
 
-        <div class="mb-3">
-          <label for="confirmPassword" class="form-label">Repeat your password</label>
-          <input type="password" class="form-control" formControlName="uRePassword" id="confirmPassword" required>
-        </div>
+      <div class="form-check mb-3 text-center">
+        <input class="form-check-input" formControlName="isAgree" type="checkbox" id="termsCheck" required>
+        <label class="form-check-label" for="termsCheck">
+          I agree to all statements in <a href="#">Terms of service</a>
+        </label>
+      </div>
 
-        <div class="form-check mb-3 text-center">
-          <input class="form-check-input" formControlName="isAgree" type="checkbox" id="termsCheck" required>
-          <label class="form-check-label" for="termsCheck">
-            I agree to all statements in <a href="#">Terms of service</a>
-          </label>
-        </div>
-
-        <div class="d-grid">
-          <button type="submit" class="btn btn-primary btn-sm">Register</button>
-        </div>
+      <div class="d-grid">
+        <button type="submit" class="btn btn-primary btn-sm">Register</button>
+      </div>
       </form>
     </div>
   </div>
