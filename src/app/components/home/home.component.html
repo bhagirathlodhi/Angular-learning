@@ -10,7 +10,7 @@
         <th>Department</th>
         <th>Salary</th>
         <th>Action</th>
-         <th>Status</th>
+       
       </tr>
     </thead>
     <tbody>
@@ -24,7 +24,6 @@
         <td><a [routerLink]="['/edit',user.eMail]" routerLinkActive="active">Edit</a> /
           <button class="btn btn-danger btn-sm" (click)="deleteUser(user.eMail)">Delete</button>
         </td>
-        <td>{{ user.isloggedIn }}</td>
       </tr>
     </tbody>
   </table>

@@ -1,0 +1,7 @@
+.custom-color{
+    background-color:rgb(188, 241, 230) !important;
+}
+
+.mat-mdc-radio-button ~ .mat-mdc-radio-button {
+  margin-left: 16px;
+}

@@ -3,13 +3,23 @@ import { HttpClient } from '@angular/common/http';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 // import { EmployeeModel } from '../model/Employee';
+import { MatFormField } from '@angular/material/input';
 import { Router } from '@angular/router';
+import { FormControl, FormGroup,ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule} from '@angular/material/form-field';
+import { MatButtonModule} from '@angular/material/button';
+import {MatInputModule} from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatRadioModule }  from '@angular/material/radio';
 
 declare const bootstrap: any;
 @Component({
   selector: 'app-new-employee',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule,MatFormField,
+    MatFormFieldModule,MatButtonModule,MatSelectModule,ReactiveFormsModule,
+    MatInputModule,MatRadioModule
+  ],
   templateUrl: './new-employee.component.html',
   styleUrl: './new-employee.component.css'
 })
@@ -56,11 +66,26 @@ export class NewEmployeeComponent implements OnInit {
   createAndSaveEmp() {
     debugger;
     this.http.post("http://localhost:3000/employeeList", this.empObj).subscribe((res: any) => {
-      this.router.navigate(['newEmp']);
-      alert("Employee Added success!");
+      // this.router.navigate(['newEmp']);
+      alert("Employee Added!");
       this.loadEmployees();
+      this.resetEmpObj();        
+      this.isListView = true;
+
     })
   }
+
+
+  resetEmpObj() {
+  this.empObj = {
+    fName: '',
+    lName: '',
+    department: '',
+    gender: '',
+    email: '',
+    ph_number: ''
+  };
+}
 
   openEditModal(emp: any) {
     this.empObj = { ...emp };

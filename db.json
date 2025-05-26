@@ -1,67 +1,22 @@
 {
   "employeeList": [
     {
-      "id": "8d06",
+      "id": "3e11",
       "fName": "Bhagirath",
       "lName": "Lodhi",
       "department": "Development",
-      "gender": "Male",
-      "email": "bhlodhi@gmail.com",
-      "ph_number": "6260940563"
+      "gender": "",
+      "email": "fffff@gmail.com",
+      "ph_number": 6260940563
     },
     {
-      "id": "681d",
-      "fName": "Mukesh",
-      "lName": "yadav",
-      "department": "Sales",
-      "gender": "Male",
-      "email": "mukesh@gmail.com",
-      "ph_number": "258963145"
-    },
-    {
-      "id": "8ffe",
-      "fName": "Priyanshu",
-      "lName": "y",
-      "department": "Sales",
-      "gender": "Male",
-      "email": "pr@gmail.com",
-      "ph_number": "2589336"
-    },
-    {
-      "id": "0886",
-      "fName": "Bhagirath",
-      "lName": "Lodhi",
+      "id": "59e2",
+      "fName": "agdf",
+      "lName": "adfgdafadf",
       "department": "HR",
       "gender": "Male",
-      "email": "@gmail.com",
-      "ph_number": "06260940563"
-    },
-    {
-      "id": "512c",
-      "fName": "Bhagirath",
-      "lName": "Lodhi",
-      "department": "HR",
-      "gender": "Male",
-      "email": "@gmail.com",
-      "ph_number": "06260940563"
-    },
-    {
-      "id": "bc98",
-      "fName": "Bttt",
-      "lName": "Lodhi",
-      "department": "HR",
-      "gender": "Male",
-      "email": "@gmail.com",
-      "ph_number": "06260940563"
-    },
-    {
-      "id": "7c81",
-      "fName": "test",
-      "lName": "hhhh",
-      "department": "HR",
-      "gender": "Female",
-      "email": "@gmail.com",
-      "ph_number": "06260940563"
+      "email": "ffffff@gmail.com",
+      "ph_number": 465465656565
     }
   ]
 }
