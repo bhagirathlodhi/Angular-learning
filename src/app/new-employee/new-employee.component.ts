@@ -11,6 +11,10 @@ import { MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule }  from '@angular/material/radio';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
+import { faPen } from '@fortawesome/free-solid-svg-icons';
+
 
 declare const bootstrap: any;
 @Component({
@@ -18,13 +22,14 @@ declare const bootstrap: any;
   standalone: true,
   imports: [CommonModule, FormsModule,MatFormField,
     MatFormFieldModule,MatButtonModule,MatSelectModule,ReactiveFormsModule,
-    MatInputModule,MatRadioModule
+    MatInputModule,MatRadioModule,FontAwesomeModule
   ],
   templateUrl: './new-employee.component.html',
   styleUrl: './new-employee.component.css'
 })
 export class NewEmployeeComponent implements OnInit {
-
+  faTrash = faTrash;
+  faPen = faPen;
   departments: any[] = [];
   employeeList: any[] = [];
   isListView: boolean = true;

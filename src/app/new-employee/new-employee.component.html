@@ -26,9 +26,10 @@
               <td>{{emp.department}}</td>
               <td>{{emp.email}}</td>
               <td>{{emp.ph_number}}</td>
-              <td><button class="btn btn-warning" (click)="openEditModal(emp)">Edit</button>/
-                <button class="btn btn-danger" (click)="deleteEmployee(emp)">Delete</button>
+              <td><button class="btn btn-warning" (click)="openEditModal(emp)"><fa-icon [icon]="faPen"></fa-icon></button>/
+                <button class="btn btn-danger" (click)="deleteEmployee(emp)"><fa-icon [icon]="faTrash"></fa-icon></button>
               </td>
+              <!-- <i class="fa-solid fa-trash"></i> -->
             </tr>
           </tbody>
         </table>

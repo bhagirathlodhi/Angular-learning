@@ -3,7 +3,7 @@ import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from "./components/footer/footer.component";
-// import { FormsModule } from '@angular/forms';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AuthService } from './services/auth.service';
 import { Router } from '@angular/router';
 
@@ -13,7 +13,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent, FooterComponent, CommonModule],
+  imports: [RouterOutlet, NavbarComponent, FooterComponent, CommonModule,FontAwesomeModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

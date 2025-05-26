@@ -2,13 +2,18 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.11.
 
+## Project Overview
+ This project For learn About Angular like folder Structur, Component, Route, Angular meterial, Forms, Dependency Injection, Component Life Cycle
+
+ User Crud >>:: In this aur team implement User SignUp, Login, Update, delete and show all the User List Using LocalStorage  
+
 ## Setup steps
  install the Node.js
  install the CLI using below command 
      npm install -g @angular/cli
  run the project using 
     ng serve
-for json-server run the 
+for json-server run the below command
     json-server --watch db.json
 
 
