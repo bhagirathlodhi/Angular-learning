@@ -21,20 +21,11 @@ export class AppComponent{
   title = 'Recon Test';
   isLoggedIn: boolean = false;
 
-
-// ngOnInit() {
-//   debugger;
-//   const userData = localStorage.getItem('currentUser');
-//   if (userData) {
-//     const user = JSON.parse(userData);
-//     this.isLoggedIn = user.isLoggedIn === true;
-//   }
-// }
-
-
 constructor(public authService: AuthService, private router: Router) {}
 
 
-
+// public ngOnInit(): void {
+//   this.router.navigate(["/login"]);
+// }
 
 }

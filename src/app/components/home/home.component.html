@@ -21,8 +21,12 @@
         <td>{{ user.department }}</td>
         <td>{{ user.salary }}</td>
         <!-- <td><a routerLink="['edit']" routerLinkActive="active">Edit</a></td> -->
-        <td><a [routerLink]="['/edit',user.eMail]" routerLinkActive="active">Edit</a> /
-          <button class="btn btn-danger btn-sm" (click)="deleteUser(user.eMail)">Delete</button>
+        <td><a [routerLink]="['/edit',user.eMail]" routerLinkActive="active"><fa-icon [icon]="faUserEdit"></fa-icon></a> /
+          <!-- <button class="btn btn-danger btn-sm" (click)="deleteUser(user.eMail)"><fa-icon [icon]="faUserXmark"></fa-icon></button> -->
+          <a href="#" (click)="$event.preventDefault(); deleteUser(user.eMail)" aria-label="Delete user">
+            <fa-icon [icon]="faUserXmark" aria-hidden="true"></fa-icon>
+          </a>
+
         </td>
       </tr>
     </tbody>

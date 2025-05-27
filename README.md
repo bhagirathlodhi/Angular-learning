@@ -1,75 +1,53 @@
-# MyAngularApp
-
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.11.
+## This project was generated using Angular CLI version 19.2.11.
 
 ## Project Overview
- This project For learn About Angular like folder Structur, Component, Route, Angular meterial, Forms, Dependency Injection, Component Life Cycle
+        This project is designed to help learn Angular concepts such as:
 
- User Crud >>:: In this aur team implement User SignUp, Login, Update, delete and show all the User List Using LocalStorage  
+            Folder structure
 
-## Setup steps
- install the Node.js
- install the CLI using below command 
-     npm install -g @angular/cli
- run the project using 
-    ng serve
-for json-server run the below command
-    json-server --watch db.json
+            Components
 
+            Routing
 
+            Angular Material
 
-## Development server
+            Forms
 
-To start a local development server, run:
+            Dependency Injection
 
-```bash
-ng serve
-```
+            Component Lifecycle Hooks
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+        User CRUD
+        Our team has implemented a User management module that supports:
 
-## Code scaffolding
+            User Sign Up
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+            Login
 
-```bash
-ng generate component component-name
-```
+            Update
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+            Delete
 
-```bash
-ng generate --help
-```
+            View all Users
 
-## Building
+            Data is stored using LocalStorage.
 
-To build the project run:
+        Setup Instructions
+            Install Node.js
 
-```bash
-ng build
-```
+            Install Angular CLI
+            Run the following command in your terminal:
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+                npm install -g @angular/cli
+                Run the Angular Project
+                Navigate to your project directory and run:
 
-## Running unit tests
+       
+                ng serve
+                Then open http://localhost:4200/ in your browser.
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+        Run JSON Server
+        we are using json-server for mock backend APIs:
+                json-server --watch db.json
 
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+    For Access to use ng serve --host 172.16.0.19 --port 4200

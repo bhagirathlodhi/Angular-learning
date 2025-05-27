@@ -1,31 +1,31 @@
 {
   "employeeList": [
     {
-      "id": "3e11",
+      "id": "1dee",
       "fName": "Bhagirath",
       "lName": "Lodhi",
       "department": "Development",
-      "gender": "",
-      "email": "fffff@gmail.com",
-      "ph_number": 6260940563
+      "gender": "Male",
+      "email": "bhagi@gmail.com",
+      "ph_number": 6260940560
     },
     {
-      "id": "59e2",
-      "fName": "agdf",
-      "lName": "adfgdafadf",
-      "department": "HR",
-      "gender": "Male",
-      "email": "ffffff@gmail.com",
-      "ph_number": 465465656565
+      "id": "0618",
+      "fName": "Priya",
+      "lName": "Satsangi",
+      "department": "R&D",
+      "gender": "Female",
+      "email": "priya@gmail.com",
+      "ph_number": 465454545
     },
     {
-      "id": "6766",
-      "fName": "Aditya ",
-      "lName": "Khanna",
-      "department": "Development",
+      "id": "7f28",
+      "fName": "Tezas",
+      "lName": "soni",
+      "department": "Sales",
       "gender": "Male",
-      "email": "adi@gmail.com",
-      "ph_number": 465465465465
+      "email": "tezas@gmail.com",
+      "ph_number": 45454545
     }
   ]
 }

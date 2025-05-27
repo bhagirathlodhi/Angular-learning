@@ -16,8 +16,11 @@
             "deptId":5,
             "deptName": "QA"
         },{
-            "deptId":1,
+            "deptId":6,
             "deptName": "Admin"
+        },{
+            "deptId":7,
+            "deptName": "R&D"
         }
        
     ]
