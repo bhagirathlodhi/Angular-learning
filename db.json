@@ -26,15 +26,6 @@
       "gender": "Male",
       "email": "tezas@gmail.com",
       "ph_number": 45454545
-    },
-    {
-      "id": "670b",
-      "fName": "Rohit",
-      "lName": "Gupta",
-      "department": "Marketing",
-      "gender": "Male",
-      "email": "rt@gmail.com",
-      "ph_number": 12212121
     }
   ]
 }

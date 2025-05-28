@@ -51,3 +51,4 @@
                 json-server --watch db.json
 
     For Access to use ng serve --host 172.16.0.19 --port 4200
+    https://jsonplaceholder.typicode.com/posts
