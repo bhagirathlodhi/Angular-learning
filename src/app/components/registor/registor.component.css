@@ -1,6 +1,23 @@
 .custom-signup-header {
-  background-color: #4CAF50; /* nice green */
+  background-color: #005cbb; /* nice green */
   color: white;
   border-radius: 12px;
   padding: 16px;
+}
+.custom-color{
+  background-color:rgb(188, 241, 230) !important;
+}
+/* .example-button-row {
+  display: table-cell;
+  max-width: 600px;
+} */
+
+
+.dropdown-icon {
+  position: absolute;
+  right: 19px;
+  top: 46%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #999;
 }

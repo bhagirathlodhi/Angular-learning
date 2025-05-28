@@ -1,54 +1,82 @@
 <div class="container mt-5" style="width: fit-content;">
-  <div class="card shadow-lg" style="border-radius: 25px; width: 600px; width: 130%;">
+  <div class="card shadow-lg custom-color" style="border-radius: 25px; width: 500px;">
     <div class="card-body">
-      <div class="custom-signup-header">
+      <div class="custom-signup-header mb-4">
         <h2 class="text-center">Sign Up</h2>
       </div>
 
       <form (ngSubmit)="onUserSave()" [formGroup]="userForm">
-        <div class="mb-3">
-          <label for="name" class="form-label">Your Name</label>
-          <input type="text" class="form-control" formControlName="uName" id="name" required>
+        <!-- Name -->
+        <div class="row mb-3 align-items-center">
+          <label class="col-md-4 col-form-label text-md-end" for="name">Your Name:</label>
+          <div class="col-md-8">
+            <input type="text" class="form-control" formControlName="uName" id="name" required />
+          </div>
         </div>
 
-        <div class="mb-3">
-          <label for="email" class="form-label">Your Email</label>
-          <input type="email" class="form-control" formControlName="eMail" id="email" required>
+        <!-- Email -->
+        <div class="row mb-3 align-items-center">
+          <label class="col-md-4 col-form-label text-md-end" for="email">Your Email:</label>
+          <div class="col-md-8">
+            <input type="email" class="form-control" formControlName="eMail" id="email" required />
+          </div>
         </div>
 
-        <div class="mb-3">
-        <label for="department" class="form-label">Department</label>
-        <select class="form-control" formControlName="department" id="department">
-          <option value="">Choose Department</option>
-          <option *ngFor="let dept of departments" [value]="dept.deptName">{{ dept.deptName }}</option>
-        </select>
-      </div>
+        <!-- Department -->
+        <div class="row mb-3 align-items-center">
+          <label class="col-md-4 col-form-label text-md-end" for="department">Department:</label>
+          <div class="col-md-8">
+            <select class="form-control" formControlName="department" id="department">
+              <option value="">Choose Department</option>
+              <option *ngFor="let dept of departments" [value]="dept.deptName">
+                {{ dept.deptName }}
+              </option>
+            </select>
+            <fa-icon [icon]="faAngleDown" class="dropdown-icon"></fa-icon>
 
-      <div class="mb-3">
-        <label for="salary" class="form-label">Salary</label>
-        <input type="number" class="form-control" formControlName="salary" id="salary" required>
-      </div>
+          </div>
+        </div>
 
-      <div class="mb-3">
-        <label for="password" class="form-label">Password</label>
-        <input type="password" class="form-control" formControlName="uPassword" id="password" required>
-      </div>
+        <!-- Salary -->
+        <div class="row mb-3 align-items-center">
+          <label class="col-md-4 col-form-label text-md-end" for="salary">Salary:</label>
+          <div class="col-md-8">
+            <input type="number" class="form-control" formControlName="salary" id="salary" required />
+          </div>
+        </div>
 
-      <div class="mb-3">
-        <label for="confirmPassword" class="form-label">Repeat your password</label>
-        <input type="password" class="form-control" formControlName="uRePassword" id="confirmPassword" required>
-      </div>
+        <!-- Password -->
+        <div class="row mb-3 align-items-center">
+          <label class="col-md-4 col-form-label text-md-end" for="password">Password:</label>
+          <div class="col-md-8">
+            <input type="password" class="form-control" formControlName="uPassword" id="password" required />
+          </div>
+        </div>
 
-      <div class="form-check mb-3 text-center">
-        <input class="form-check-input" formControlName="isAgree" type="checkbox" id="termsCheck" required>
-        <label class="form-check-label" for="termsCheck">
-          I agree to all statements in <a href="#">Terms of service</a>
-        </label>
-      </div>
+        <!-- Confirm Password -->
+        <div class="row mb-3 align-items-center">
+          <label class="col-md-4 col-form-label text-md-end" for="confirmPassword">Repeat Password:</label>
+          <div class="col-md-8">
+            <input type="password" class="form-control" formControlName="uRePassword" id="confirmPassword" required />
+          </div>
+        </div>
 
-      <div class="d-grid">
-        <button type="submit" class="btn btn-primary btn-sm">Register</button>
-      </div>
+        <!-- Terms Checkbox -->
+        <div class="row mb-3">
+          <div class="col-md-12 text-center">
+            <input class="form-check-input me-2" formControlName="isAgree" type="checkbox" id="termsCheck" required />
+            <label class="form-check-label" for="termsCheck">
+              I agree to all statements in <a href="#">Terms of service</a>
+            </label>
+          </div>
+        </div>
+
+        <!-- Register Button -->
+    
+           <div class="example-button-row text-center">
+            <button mat-flat-button>Basic</button>
+          </div>
+          
       </form>
     </div>
   </div>
