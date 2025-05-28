@@ -26,6 +26,24 @@
       "gender": "Male",
       "email": "tezas@gmail.com",
       "ph_number": 45454545
+    },
+    {
+      "id": "670b",
+      "fName": "Rohit",
+      "lName": "Gupta",
+      "department": "Marketing",
+      "gender": "Male",
+      "email": "rt@gmail.com",
+      "ph_number": 12212121
+    },
+    {
+      "id": "1831",
+      "fName": "Chandresh Sir",
+      "lName": "Sir",
+      "department": "Head",
+      "gender": "Male",
+      "email": "acutechead@gmail.com",
+      "ph_number": 5445454544
     }
   ]
 }

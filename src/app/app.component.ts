@@ -21,11 +21,9 @@ export class AppComponent{
   title = 'Recon Test';
   isLoggedIn: boolean = false;
 
-constructor(public authService: AuthService, private router: Router) {}
+  constructor(public authService: AuthService, private router: Router) {}
 
 
-// public ngOnInit(): void {
-//   this.router.navigate(["/login"]);
-// }
+
 
 }

@@ -16,6 +16,7 @@
          <li *ngIf="isLoggedIn" class="nav-item">
           <a class="nav-link" routerLink="newEmp">Add Emp</a>
         </li>
+        
         <li *ngIf="!isLoggedIn" class="nav-item">
           <a class="nav-link" routerLink="login">Login</a>
         </li>
@@ -24,6 +25,15 @@
         </li>
 
       
+       
+      </ul>
+     
+      <ul class="nav navbar-nav ms-auto">
+        <li *ngIf="isLoggedIn" class="nav-item d-flex align-items-center">
+          <a class="nav-link" href="#">
+            <fa-icon [icon]="faUser"></fa-icon> {{ currentUser?.uName }}
+          </a>
+        </li>
         <li class="nav-item" *ngIf="isLoggedIn">
           <a class="nav-link" (click)="logout()">Logout</a>
         </li>

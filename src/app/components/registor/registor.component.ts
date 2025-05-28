@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,Pipe} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormControl, FormGroup, Validators, ReactiveFormsModule,FormsModule ,} from '@angular/forms';
 import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
+// import { Pipe } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 // import { FormsModule } from '@angular/forms';
 

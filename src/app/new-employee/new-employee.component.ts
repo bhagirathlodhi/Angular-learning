@@ -52,6 +52,7 @@ export class NewEmployeeComponent implements OnInit {
   ngOnInit(): void {
     this.loadDepartMents();
     this.loadEmployees();
+    
   }
 
   loadDepartMents() {

@@ -3,16 +3,20 @@ import { CommonModule, isPlatformBrowser } from '@angular/common';
 
 import { RouterLink, Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
-import { LoginComponent } from '../login/login.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
+// import { LoginComponent } from '../login/login.component';
+import { of } from 'rxjs';
+
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [RouterLink, CommonModule],
+  imports: [RouterLink, CommonModule,FontAwesomeModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent implements OnInit {
-
+  faUser = faUser;
   constructor(private router: Router, @Inject(PLATFORM_ID) private platformId: Object, public authService: AuthService) {
     this.isBrowser = isPlatformBrowser(platformId);
   }
@@ -21,10 +25,14 @@ export class NavbarComponent implements OnInit {
   isLoggedIn: boolean = false;
   isBrowser: boolean;
 
-
+public currentUser: any = null;
   ngOnInit(): void {
+    debugger;
     this.authService.isLoggedIn$.subscribe((status) => {
       this.isLoggedIn = status;
+       this.currentUser  =  this.authService.getCurrentUser();
+      // this.currentUser = user?.fName|| '';
+      // console.log(this.currentUser+" :currentUser")
     });
   }
 
