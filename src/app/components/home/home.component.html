@@ -8,7 +8,7 @@
         <th>Name</th>
         <th>Email</th>
         <th>Department</th>
-        <th>Salary</th>
+        <!-- <th>Salary</th> -->
         <th>Action</th>
        
       </tr>
@@ -19,7 +19,7 @@
         <td>{{ user.uName }}</td>
         <td>{{ user.eMail }}</td>
         <td>{{ user.department }}</td>
-        <td>{{ user.salary }}</td>
+        <!-- <td>{{ user.salary }}</td> -->
         <!-- <td><a routerLink="['edit']" routerLinkActive="active">Edit</a></td> -->
         <td><a [routerLink]="['/edit',user.eMail]" routerLinkActive="active"><fa-icon [icon]="faUserEdit"></fa-icon></a> /
           <!-- <button class="btn btn-danger btn-sm" (click)="deleteUser(user.eMail)"><fa-icon [icon]="faUserXmark"></fa-icon></button> -->

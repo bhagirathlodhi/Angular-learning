@@ -2,7 +2,6 @@ import { Component, inject, OnInit, ElementRef, ViewChild } from '@angular/core'
 import { HttpClient } from '@angular/common/http';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-// import { EmployeeModel } from '../model/Employee';
 import { MatFormField } from '@angular/material/input';
 import { Router } from '@angular/router';
 import { FormControl, FormGroup,ReactiveFormsModule } from '@angular/forms';
@@ -63,7 +62,7 @@ export class NewEmployeeComponent implements OnInit {
 
   loadEmployees() {
 
-    this.http.get("http://localhost:3000/employeeList").subscribe((res: any) => {
+    this.http.get("http://172.16.0.40:3000/employeeList").subscribe((res: any) => {
       this.employeeList = res;
     });
   }
@@ -71,7 +70,7 @@ export class NewEmployeeComponent implements OnInit {
 
   createAndSaveEmp() {
     debugger;
-    this.http.post("http://localhost:3000/employeeList", this.empObj).subscribe((res: any) => {
+    this.http.post("http://172.16.0.40:3000/employeeList", this.empObj).subscribe((res: any) => {
       // this.router.navigate(['newEmp']);
       alert("Employee Added!");
       this.loadEmployees();
@@ -105,7 +104,7 @@ export class NewEmployeeComponent implements OnInit {
   // Update the Employee
   updateEmployee(emp: any) {
     
-    this.http.patch(`http://localhost:3000/employeeList/${emp.id}`, emp).subscribe((res: any) => {
+    this.http.patch(`http://172.16.0.40:3000/employeeList/${emp.id}`, emp).subscribe((res: any) => {
       alert('Employee updated successfully');
       const modalInstance = bootstrap.Modal.getInstance(this.editModal.nativeElement);
       modalInstance.hide();
@@ -118,7 +117,7 @@ export class NewEmployeeComponent implements OnInit {
 
   deleteEmployee(emp: any) {
   debugger;
-  this.http.delete(`http://localhost:3000/employeeList/${emp.id}`).subscribe((res: any) => {
+  this.http.delete(`http://172.16.0.40:3000/employeeList/${emp.id}`).subscribe((res: any) => {
     alert('Employee Deleted successfully');
     this.loadEmployees();
   });

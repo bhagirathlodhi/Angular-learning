@@ -23,7 +23,7 @@ export class RegistorComponent implements OnInit{
     uName: new FormControl(""),
     eMail: new FormControl(""),
     department: new FormControl(""),
-    salary: new FormControl(""),
+    // salary: new FormControl(""),
     uPassword: new FormControl(""),
     uRePassword : new FormControl(""),
     isAgree: new FormControl(false),
@@ -38,7 +38,6 @@ export class RegistorComponent implements OnInit{
 
  departments: any[] = [];
   onUserSave() {
-    debugger;
   const user = this.userForm.value;
   this.authService.signup(user);
   alert('Signup successful');
