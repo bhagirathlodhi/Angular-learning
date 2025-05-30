@@ -23,7 +23,10 @@
             "deptName": "R&D"
         },{
             "deptId":8,
-            "deptName": "Head"
+            "deptName": "Management"
+        },{
+            "deptId":9,
+            "deptName": "Support"
         }
        
     ]
